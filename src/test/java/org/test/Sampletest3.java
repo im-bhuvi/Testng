@@ -36,7 +36,7 @@ public class Sampletest3 {
 	
 	@Test
 	private void test1() {
-		//bhuvi git check
+		//bhuvi git check push
 		System.out.println("test1");
 
 	}
