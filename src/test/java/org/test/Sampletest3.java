@@ -40,9 +40,15 @@ public class Sampletest3 extends Bassclass {
 	}
 	
 	@Test
+<<<<<<< HEAD
 	private void test1() throws IOException {
 		String excel = readExcel("Sample", "sheet1", 1,0);
 		System.out.println(excel);
+=======
+	private void test1() {
+		//bhuvi git check 
+		//changed
+>>>>>>> eb36c66a3ecef83fea7efbecdb58a639f280aa38
 		System.out.println("test1");
 
 	}
