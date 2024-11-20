@@ -1,12 +1,10 @@
 package org.task;
 
-import java.awt.RenderingHints.Key;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
-import java.util.jar.Manifest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -37,8 +35,24 @@ public class Task  {
 		List<WebElement> price = driver.findElements(By.xpath("//div[@class='Nx9bqj _4b5DiR']"));
 		for (int i = 0; i <price.size(); i++) {
 			WebElement webElement = price.get(i);
-			System.out.println(i+webElement.getText());
+			System.out.println(i+webElement.getText());	
 		}
+		
+        List <Integer> l = new ArrayList<Integer>(); 
+		
+		for(WebElement x : price) {
+			String text = x.getText();
+			String replace = text.replace("₹", "");
+			String replace2 = replace.replace(",", "");
+			int int1 = Integer.parseInt(replace2);
+			Integer CostInteger = Integer.valueOf(int1);
+			l.add(CostInteger);
+		}
+		System.out.println("===============================================================");
+        Collections.sort(l);
+		System.out.println("Minimum price = "+l.get(0));
+		System.out.println("Maximum price = "+l.get(l.size()-1));
+
 		System.out.println("===============================================================");
 		WebElement iphone = driver.findElement(By.xpath("(//div[@class='KzDlHZ'])[5]"));
 		WebElement cost = driver.findElement(By.xpath("(//div[@class='Nx9bqj _4b5DiR'])[5]"));

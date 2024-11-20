@@ -1,5 +1,10 @@
 package org.test;
 
+
+
+import java.io.IOException;
+
+import org.bass.Bassclass;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -8,7 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class Sampletest3 {
+public class Sampletest3 extends Bassclass {
 	@BeforeClass
 	private void beforeclass() {
 		System.out.println("beforeclassC");
@@ -35,8 +40,9 @@ public class Sampletest3 {
 	}
 	
 	@Test
-	private void test1() {
-		//bhuvi git check push
+	private void test1() throws IOException {
+		String excel = readExcel("Sample", "sheet1", 1,0);
+		System.out.println(excel);
 		System.out.println("test1");
 
 	}

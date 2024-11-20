@@ -1,12 +1,11 @@
 package org.test;
 
 import java.awt.AWTException;
-
+import java.io.IOException;
 
 import org.bass.Bassclass;
 import org.page.AccCreate;
 import org.page.Facebooklogin;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -40,7 +39,7 @@ public class Facebook extends Bassclass {
 	}
 	
 	@Test
-	private void test1() throws AWTException, InterruptedException {
+	private void test1() throws AWTException, InterruptedException, IOException {
 		url("https://www.facebook.com/");
 		SoftAssert s=new SoftAssert();
 		
@@ -50,11 +49,11 @@ public class Facebook extends Bassclass {
 		s.assertTrue(contains,"verify url");
 		AccCreate a=new AccCreate();
 		click(a.getCeratebttn());
-		sendkeys(a.getFirstname(), "bhuvanesh");
+		sendkeys(a.getFirstname(),readExcel("Sample", "sheet1", 1, 0));
 		
 		//verify name
 		String getattribute = getattribute(a.getFirstname());
-		s.assertEquals(getattribute, "huvanesh","verify name");
+		s.assertEquals(getattribute, "huvi","verify name");
 		sleep(2000);
 		doubleclick(a.getFirstname());
 		copy();

@@ -1,13 +1,9 @@
 package org.test;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-import java.util.Iterator;
 import java.util.List;
 
 import org.bass.Bassclass;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -45,8 +41,6 @@ public class Sampletest extends Bassclass {
 			System.out.println(options.get(j).getText()+"/"+options2.get(j).getText()+"/"+options3.get(j).getText());
 		
 		}
-		
-		
 	}
 	
 }
