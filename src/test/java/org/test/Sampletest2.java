@@ -77,7 +77,7 @@ public class Sampletest2 extends Bassclass {
 		li.addAll(windowHandles);
 		driver.switchTo().window(li.get(1));
 		
-		System.out.println("git");
+		System.out.println("git ok done");
 		System.out.println("testbb");
 
 	}
