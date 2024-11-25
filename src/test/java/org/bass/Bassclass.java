@@ -107,6 +107,11 @@ public class Bassclass {
 		Actions a =new Actions(driver);
 		a.contextClick(c).perform();
 	}
+	public static void contextclick() {
+		Actions a =new Actions(driver);
+		a.contextClick().perform();
+	}
+	
 	public static void movetoelement(WebElement b) {
 		Actions a =new Actions(driver);
 		a.moveToElement(b).perform();
@@ -137,6 +142,11 @@ public class Bassclass {
 		Robot r=new Robot();
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
+	}
+	public static void keydown() throws AWTException {
+		Robot r=new Robot();
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
 	}
 	public static String readExcel(String filename,String sheet,int row,int cell) throws IOException {
 		File f=new File("C:\\\\Users\\\\dell\\\\eclipse-workspace\\\\Guied\\\\XLsheet\\\\New Microsoft Excel Worksheet.xlsx");
@@ -171,8 +181,7 @@ public class Bassclass {
 		List<String> li=new ArrayList<String>();
 		li.addAll(windowHandles);
 		driver.switchTo().window(li.get(value));
-
 	}
-	
+	 
 
 }
