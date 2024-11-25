@@ -1,11 +1,24 @@
 package org.bass;
 
 import java.awt.AWTException;
-import java.awt.Desktop.Action;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -94,6 +107,11 @@ public class Bassclass {
 		Actions a =new Actions(driver);
 		a.contextClick(c).perform();
 	}
+	public static void contextclick() {
+		Actions a =new Actions(driver);
+		a.contextClick().perform();
+	}
+	
 	public static void movetoelement(WebElement b) {
 		Actions a =new Actions(driver);
 		a.moveToElement(b).perform();
@@ -125,21 +143,45 @@ public class Bassclass {
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 	}
-	
-	
-	
-	
-	
-	
-	  
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public static void keydown() throws AWTException {
+		Robot r=new Robot();
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+	}
+	public static String readExcel(String filename,String sheet,int row,int cell) throws IOException {
+		File f=new File("C:\\\\Users\\\\dell\\\\eclipse-workspace\\\\Guied\\\\XLsheet\\\\New Microsoft Excel Worksheet.xlsx");
+		FileInputStream st=new FileInputStream(f);
+		Workbook w=new XSSFWorkbook(st);
+		Sheet sheet2 = w.getSheet(sheet);
+		Row row2 = sheet2.getRow(row);
+		Cell cell2 = row2.getCell(cell);
+		int cellType = cell2.getCellType();
+		String value=null;
+		if (cellType==1) {
+			 value = cell2.getStringCellValue();
+		}
+		else {
+			if (DateUtil.isCellDateFormatted(cell2)) {
+				Date dateCellValue = cell2.getDateCellValue();
+				SimpleDateFormat sd=new SimpleDateFormat("dd-mm-yyy");
+				 value = sd.format(dateCellValue);
+			}
+			else {
+				double numericCellValue = cell2.getNumericCellValue();
+				long num=(long)numericCellValue;
+				value=String.valueOf(num);
+			}
+			
+		}
+		return value;
+		
+	}	
+	public static void Windowhandles(Integer value) {
+		Set<String> windowHandles = driver.getWindowHandles();
+		List<String> li=new ArrayList<String>();
+		li.addAll(windowHandles);
+		driver.switchTo().window(li.get(value));
+	}
+	 
 
 }

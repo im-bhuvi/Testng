@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.bass.Bassclass;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -16,6 +17,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 
 
@@ -48,12 +50,13 @@ public class Sampletest2 extends Bassclass {
 		enterr();
 		WebElement element2 = driver.findElement(By.xpath("(//p[@class='product-title'])[1]"));
 		click(element2);
-		Set<String> windowHandles = driver.getWindowHandles();
-		List<String> li=new ArrayList<String>();
-		li.addAll(windowHandles);
-		driver.switchTo().window(li.get(1));
+		Windowhandles(1);
 		WebElement element3 = driver.findElement(By.xpath("//h1[@class='pdp-e-i-head']"));
-		System.out.println(gettext(element3));
+		SoftAssert s=new SoftAssert();
+		String text = element3.getText();
+		boolean contains = text.contains("?");
+		s.assertTrue(contains,"testtttt");
+		s.assertAll();
      	System.out.println("testb");
 	}
 	@Test

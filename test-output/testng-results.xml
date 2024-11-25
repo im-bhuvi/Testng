@@ -1,44 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-16T14:03:16Z" name="Default suite" finished-at="2024-11-16T14:03:16Z" duration-ms="49">
+  <suite started-at="2024-11-25T07:55:26Z" name="Default suite" finished-at="2024-11-25T07:55:26Z" duration-ms="452">
     <groups>
     </groups>
-    <test started-at="2024-11-16T14:03:16Z" name="Default test" finished-at="2024-11-16T14:03:16Z" duration-ms="49">
+    <test started-at="2024-11-25T07:55:26Z" name="Default test" finished-at="2024-11-25T07:55:26Z" duration-ms="452">
       <class name="org.test.Sampletest3">
-        <test-method is-config="true" signature="beforeclass()[pri:0, instance:org.test.Sampletest3@78452606]" started-at="2024-11-16T14:03:16Z" name="beforeclass" finished-at="2024-11-16T14:03:16Z" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="beforeclass()[pri:0, instance:org.test.Sampletest3@7ac296f6]" started-at="2024-11-25T07:55:26Z" name="beforeclass" finished-at="2024-11-25T07:55:26Z" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeclass -->
-        <test-method is-config="true" signature="beforemethod()[pri:0, instance:org.test.Sampletest3@78452606]" started-at="2024-11-16T14:03:16Z" name="beforemethod" finished-at="2024-11-16T14:03:16Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:org.test.Sampletest3@7ac296f6]" started-at="2024-11-25T07:55:26Z" name="beforemethod" finished-at="2024-11-25T07:55:26Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforemethod -->
-        <test-method signature="test()[pri:0, instance:org.test.Sampletest3@78452606]" started-at="2024-11-16T14:03:16Z" name="test" finished-at="2024-11-16T14:03:16Z" duration-ms="14" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method signature="test1()[pri:0, instance:org.test.Sampletest3@78452606]" started-at="2024-11-16T14:03:16Z" name="test1" finished-at="2024-11-16T14:03:16Z" duration-ms="2" status="PASS">
+        <test-method signature="test1()[pri:0, instance:org.test.Sampletest3@7ac296f6]" started-at="2024-11-25T07:55:26Z" name="test1" finished-at="2024-11-25T07:55:26Z" duration-ms="423" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="aftermethod()[pri:0, instance:org.test.Sampletest3@78452606]" started-at="2024-11-16T14:03:16Z" name="aftermethod" finished-at="2024-11-16T14:03:16Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="aftermethod()[pri:0, instance:org.test.Sampletest3@7ac296f6]" started-at="2024-11-25T07:55:26Z" name="aftermethod" finished-at="2024-11-25T07:55:26Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method is-config="true" signature="beforemethod()[pri:0, instance:org.test.Sampletest3@78452606]" started-at="2024-11-16T14:03:16Z" name="beforemethod" finished-at="2024-11-16T14:03:16Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforemethod -->
-        <test-method is-config="true" signature="afterclass()[pri:0, instance:org.test.Sampletest3@78452606]" started-at="2024-11-16T14:03:16Z" name="afterclass" finished-at="2024-11-16T14:03:16Z" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="afterclass()[pri:0, instance:org.test.Sampletest3@7ac296f6]" started-at="2024-11-25T07:55:26Z" name="afterclass" finished-at="2024-11-25T07:55:26Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterclass -->
-        <test-method is-config="true" signature="aftermethod()[pri:0, instance:org.test.Sampletest3@78452606]" started-at="2024-11-16T14:03:16Z" name="aftermethod" finished-at="2024-11-16T14:03:16Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
       </class> <!-- org.test.Sampletest3 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
